@@ -14,7 +14,7 @@ class PasswordProblem():
 def read_input():
     """Reads the input of the problem"""
     passwords = []
-    with open('day2/day2Input.txt') as f:
+    with open('day2/input.txt') as f:
         for line in f:
             num_range, letter, password = line.split(' ')
             low, high = num_range.split('-')
