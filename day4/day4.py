@@ -12,13 +12,10 @@ def in_range(x, min, max):
 def birth_validity(x): return in_range(x, 1920, 2002)
 def issue_validity(x): return in_range(x, 2010, 2020)
 def expiration_validity(x): return in_range(x, 2020, 2030)
-def eye_validity(x): return x in EYE_COLOURS
 def pid_validity(x): return re.compile(r"^[0-9]{9}$").match(x)
 def hair_validity(x): return re.compile(r"^#[0-9a-f]{6}$").match(x)
-def height_validity(x): return re.compile(
-    r"^(1[5-8][0-9]|19[0-3])cm|(59|6[0-9]|7[0-6])in$").match(x)
-
-
+def height_validity(x): return re.compile(r"^(1[5-8][0-9]|19[0-3])cm|(59|6[0-9]|7[0-6])in$").match(x)
+def eye_validity(x): return x in EYE_COLOURS
 def country_validity(x): return True
 
 
