@@ -1,3 +1,5 @@
+import re
+
 MANDATORY = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']
 OPTIONAL = ['cid']
 EYE_COLOURS = ['amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth']
@@ -11,22 +13,13 @@ def birth_validity(x): return in_range(x, 1920, 2002)
 def issue_validity(x): return in_range(x, 2010, 2020)
 def expiration_validity(x): return in_range(x, 2020, 2030)
 def eye_validity(x): return x in EYE_COLOURS
-def pid_validity(x): return len(x) == 9 and all(map(lambda d: d.isdigit(), x))
+def pid_validity(x): return re.compile(r"^[0-9]{9}$").match(x)
+def hair_validity(x): return re.compile(r"^#[0-9a-f]{6}$").match(x)
+def height_validity(x): return re.compile(
+    r"^(1[5-8][0-9]|19[0-3])cm|(59|6[0-9]|7[0-6])in$").match(x)
+
+
 def country_validity(x): return True
-
-
-def hair_validity(x): return x[0] == '#' and len(x) == 7 and all(
-    map(lambda c: c.isdigit() or (c >= 'a' and c <= 'f'), x[1:]))
-
-
-def height_validity(x):
-    postfix = x[-2:]
-    numbers = x[:-2]
-    if postfix == 'cm':
-        return in_range(numbers, 150, 193)
-    elif postfix == 'in':
-        return in_range(numbers, 59, 76)
-    return False
 
 
 validator_mapping = {
