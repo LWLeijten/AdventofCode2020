@@ -4,7 +4,7 @@ from functools import reduce
 def read_input():
     """Reads the input of the problem and stores it as a 2d matrix"""
     grid = []
-    with open('day3/input.txt') as f:
+    with open('solutions/day3/input.txt') as f:
         for i, line in enumerate(f):
             grid.append([])
             for char in line.strip('\n'):

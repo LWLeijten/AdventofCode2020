@@ -7,7 +7,7 @@ COLS = 7
 def read_input():
     """Reads the input of the problem and returns it as a list of split instructions"""
     splits = []
-    with open('day5/input.txt') as f:
+    with open('solutions/day5/input.txt') as f:
         for line in f:
             splits.append(line.strip(' \n'))
     return splits

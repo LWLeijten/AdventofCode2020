@@ -34,7 +34,7 @@ validator_mapping = {
 def read_input():
     """Reads the input of the problem and stores it as a list of dicts"""
     passports = []
-    with open('day4/input.txt') as f:
+    with open('solutions/day4/input.txt') as f:
         cur_passport = {}
         for line in f:
             if not line.strip():

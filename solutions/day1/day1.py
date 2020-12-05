@@ -5,7 +5,7 @@ from functools import reduce
 def read_input():
     """Reads the input of the problem and returns it as a numbers list"""
     numbers = []
-    with open('day1/input.txt') as f:
+    with open('solutions/day1/input.txt') as f:
         for line in f:
             numbers.append(int(line.strip(' \n')))
     return numbers
