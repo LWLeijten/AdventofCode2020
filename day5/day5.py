@@ -39,7 +39,7 @@ def missing_seat_ids(taken_seats):
 # Find the solutions for part 1 and 2 of the puzzle.
 if __name__ == "__main__":
     splits = read_input()
-    seat_ids = list(map(lambda s: seat_id(bsp(s[:-3], 0, 127), bsp(s[-3:], 0, 7)), splits)) # Oneliner more for fun than readability
+    seat_ids = list(map(lambda s: seat_id(bsp(s[:-3], 0, ROWS), bsp(s[-3:], 0, COLS)), splits)) # Oneliner more for fun than readability
     # Part 1
     print(max(seat_ids))
     # Part 2
