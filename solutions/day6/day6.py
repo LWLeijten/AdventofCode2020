@@ -1,31 +1,30 @@
 
 def read_input():
-    """Reads the input of the problem and returns it as a list of groups with question numbers"""
+    """Reads the input of the problem and returns it as a list of sets of yes answers"""
     groups = []
+    cur_group = []
     with open('solutions/day6/input.txt') as f:
-        cur_group = []
-        people = 0
         for line in f:
             if not line.strip():
-                groups.append((cur_group, people))
+                groups.append(cur_group)
                 cur_group = []
-                people = 0
             else:
-                people += 1
+                cur_person = []
                 for char in line.strip('\n'):
-                    cur_group.append(char)
-        groups.append((cur_group, people))
+                    cur_person.append(char)
+                cur_group.append(set(cur_person))
+        groups.append(cur_group)
     return groups
 
 
 def count_anyone(groups):
     """ Counts the questions for which ANYONE in the group gave yes as an answer."""
-    return sum(map(lambda g: len(set(g[0])), groups))
+    return sum([len(set.union(*g)) for g in groups])
 
 
 def count_everyone(groups):
     """ Counts the questions for which EVERYONE in the group gave yes as an answer."""
-    return sum(map(lambda g: len(list(filter(lambda a: g[0].count(a) == g[1], set(g[0])))), groups))
+    return sum([len(set.intersection(*g)) for g in groups])
 
 
 # Find the solutions for part 1 and 2 of the puzzle.
@@ -33,24 +32,3 @@ if __name__ == "__main__":
     groups = read_input()
     print(count_anyone(groups))
     print(count_everyone(groups))
-
-
-""" 
-Since the one-liners might be more for fun and challenge than human readability,
-below are count_anyone() and count_everyone() defined in a more human-friendly way
-
-def count_anyone():
-    count = 0
-    for (answers, _) in groups:
-        count += len(set(answers))
-    return count
-
-def count_everyone():
-    count = 0
-    for (answers, people) in groups:
-        questions = set(answers)
-        for q in questions:
-            count += (answers.count(q) == people)
-    return count 
-    
-"""
