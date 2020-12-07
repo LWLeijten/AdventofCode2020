@@ -3,47 +3,48 @@ import re
 
 
 def read_input():
-    hash_table = {}
-    hash_table2 = {}
+    """ Construct a directed graph of all the bags.
+        An edge represents a parent bag containing X amount of bags of the child."""
+    DG = nx.DiGraph()
     parent_regex = re.compile(r"^(\w+ \w+)")
     child_regex = re.compile(r"(\d+) (\w+ \w+)")
     with open('solutions/day7/input.txt') as f:
         for line in f:
             parent = parent_regex.match(line).group(1)
-            hash_table2[parent] = []
             children = child_regex.findall(line)
+            if not parent in DG:
+                DG.add_node(parent)
             if children:
                 for child in children:
-                    hash_table2[parent].append((child[1], child[0]))
-                    if not child[1] in hash_table.keys():
-                        hash_table[child[1]] = [(parent, child[0])]
-                    else:
-                        hash_table[child[1]].append((parent, child[0]))
-    return hash_table, hash_table2
+                    if not child[1] in DG:
+                        DG.add_node(child[1])
+                    DG.add_edge(parent, child[1], distance=int(child[0]))
+    return DG
 
 
-result_set = set()
+def gold_possibilities(graph, cur_node, visited=set()):
+    """ Recursively traverses the graph from the target node upward.
+        Keeps track of a set of visited nodes to determine the final count. """
+    for pred in graph.predecessors(cur_node):
+        visited.add(pred)
+        gold_possibilities(graph, pred, visited)
+    return len(visited)
 
 
-def gold_possibilities(hash_table, root):
-    if not root in hash_table.keys():
-        result_set.add(root)
-    else:
-        for tup in hash_table[root]:
-            result_set.add(tup[0])
-            gold_possibilities(hash_table, tup[0])
-    return result_set
-
-
-def count_content(ht, root):
+def count_content(graph, cur_node):
+    """ Recursively traverses the graph from the target node downward.
+        Counts the amount of child bags in order to form a final total. """
     total = 1
-    for tup in ht[root]:
-        total += (int(tup[1]) * count_content(ht, tup[0]))
+    for succ in graph.successors(cur_node):
+        edge = graph.edges[cur_node, succ]
+        total += edge.get('distance') * count_content(graph, succ)
     return total
 
 
-hash_table, hash_table2 = read_input()
-gold_possibilities(hash_table, 'shiny gold')
-print(len(result_set))
-# minus 1 for the shiny gold bag itself
-print(count_content(hash_table2, 'shiny gold') - 1)
+# Find the solutions for part 1 and 2 of the puzzle.
+if __name__ == "__main__":
+    bag_graph = read_input()
+    # Part 1
+    print(gold_possibilities(bag_graph, 'shiny gold'))
+    # Part 2
+    print(count_content(bag_graph, 'shiny gold') - 1)
