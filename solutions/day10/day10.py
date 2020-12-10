@@ -11,7 +11,7 @@ def read_input():
 
 
 def chain_all_adapters(numbers):
-    """ Create a chain of all adapters starting at 0 end ending at the max value. 
+    """ Create a chain of all adapters starting at 0 end ending at the max value.
         When multiple possibilities are present, pick the minimum.
         Returns the product of the amount of 1-jolts and 3-jolts. """
     numbers = copy(numbers)
@@ -29,12 +29,12 @@ def distinct_chains(numbers):
     """ Calculate all distinct chains using Dynamic Programming.
         Use a dictionary to keep track of intermediate results. """
     dp_hist = dict.fromkeys(numbers, 0)
-    dp_hist[max(numbers)] = 1
-    for n in list(reversed(numbers)):
+    dp_hist[0] = 1
+    for n in numbers:
         for i in range(1, 4):
-            if n - i in numbers:
-                dp_hist[n-i] = dp_hist[n-i] + dp_hist[n]
-    return dp_hist[0]
+            if n + i in numbers:
+                dp_hist[n+i] += dp_hist[n]
+    return dp_hist[max(numbers)]
 
 
 # Find the solutions for part 1 and 2 of the puzzle.
