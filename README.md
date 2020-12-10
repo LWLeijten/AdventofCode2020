@@ -12,3 +12,4 @@ My solutions to the advent of code event 2020. For this edition I chose to solve
 | 7. | Handy Haversacks | [link](https://adventofcode.com/2020/day/7)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day7) |
 | 8. | Handheld Halting | [link](https://adventofcode.com/2020/day/8)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day8) |
 | 9. | Encoding Error | [link](https://adventofcode.com/2020/day/9)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day9) |
+| 10. | Adapter Array | [link](https://adventofcode.com/2020/day/10)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day10) |
