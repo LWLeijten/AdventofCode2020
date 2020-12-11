@@ -65,7 +65,6 @@ def occupied_visibles(matrix, seat_y, seat_x):
 def simulate(matrix, visibility, tolerance):
     """ Runs the simulation given a matrix of seats, a visibility function and a tolerance threshold.
         Returns the amount of occupied chairs at the equilibrium. """
-    mutations = False
     new_matrix = deepcopy(matrix)
     for y in range(len(matrix)):
         for x in range(len(matrix[0])):
@@ -73,11 +72,9 @@ def simulate(matrix, visibility, tolerance):
             seat = matrix[y][x]
             if seat == 'L' and adjacents == 0:
                 new_matrix[y][x] = '#'
-                mutations = True
             elif seat == '#' and adjacents >= tolerance:
                 new_matrix[y][x] = 'L'
-                mutations = True
-    if mutations:
+    if new_matrix != matrix:
         return simulate(new_matrix, visibility, tolerance)
     else:
         return sum(map(lambda r: r.count('#'), new_matrix))
