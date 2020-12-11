@@ -13,3 +13,4 @@ My solutions to the advent of code event 2020. For this edition I chose to solve
 | 8. | Handheld Halting | [link](https://adventofcode.com/2020/day/8)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day8) |
 | 9. | Encoding Error | [link](https://adventofcode.com/2020/day/9)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day9) |
 | 10. | Adapter Array | [link](https://adventofcode.com/2020/day/10)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day10) |
+| 11. | Seating System | [link](https://adventofcode.com/2020/day/11)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day11) |
