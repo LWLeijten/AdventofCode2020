@@ -15,4 +15,6 @@ My solutions to the advent of code event 2020. For this edition I chose to solve
 | 10. | :electric_plug: Adapter Array | [link](https://adventofcode.com/2020/day/10)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day10)| 
 | 11. | :seat: Seating System | [link](https://adventofcode.com/2020/day/11)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day11) |
 | 12. | :ship: Rain Risk | [link](https://adventofcode.com/2020/day/12)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day12) |
-| 12. | :bus: Shuttle Search | [link](https://adventofcode.com/2020/day/13)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day13) |
+| 13. | :bus: Shuttle Search | [link](https://adventofcode.com/2020/day/13)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day13) |
+| 14. | :whale: Docking Data | [link](https://adventofcode.com/2020/day/14)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day14) |
+
