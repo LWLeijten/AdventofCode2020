@@ -1,26 +1,22 @@
 def play_game(numbers, rounds):
+    """ Plays the memory with a given startlist of numbers for a certain amount of rounds.
+        Use a dictionary to keep track of the last occurences of numbers for efficiency. """
+
+    # Init memory with the starting numbers
     memory = {}
     for i, n in enumerate(numbers):
-        memory[n] = [i]
+        memory[n] = i
+
+    # Play the game for the given amount of rounds
     while len(numbers) < rounds:
         cur_index = len(numbers) - 1
         last_num = numbers[cur_index]
-        if len(memory[last_num]) == 1:
+        if last_num not in memory:
             numbers.append(0)
-            if 0 not in memory:
-                memory[0] = [cur_index + 1]
-            else:
-                memory[0].append(cur_index + 1)
-                memory[0] = memory[0][-2:]
+            memory[last_num] = cur_index
         else:
-            new_num = memory[last_num][-1] - memory[last_num][-2]
-            numbers.append(new_num)
-            if new_num not in memory:
-                memory[new_num] = [cur_index + 1]
-            else:
-                memory[new_num].append(cur_index+1)
-            if len(memory[new_num]) > 2:
-                memory[new_num] = memory[new_num][-2:]
+            numbers.append(cur_index - memory[last_num])
+            memory[last_num] = cur_index
     return numbers[rounds-1]
 
 
