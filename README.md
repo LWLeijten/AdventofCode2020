@@ -19,3 +19,6 @@ My solutions to the advent of code event 2020. For this edition I chose to solve
 | 14. | :whale: Docking Data | [link](https://adventofcode.com/2020/day/14)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day14) |
 | 15. | :brain: Rambunctious Recitation | [link](https://adventofcode.com/2020/day/15)  |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day15) |
 | 16. | :bullettrain_side: Ticket Translation | [link](https://adventofcode.com/2020/day/16) |[solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day16) |
+| 17. | :large_blue_diamond: Conway Cubes | [link](https://adventofcode.com/2020/day/17)|[solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day17) |
+| 18. | :heavy_plus_sign: Operation Order | [link](https://adventofcode.com/2020/day/18)|[solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day18) |
+| 19. | :octopus: Monster Messages | [link](https://adventofcode.com/2020/day/19)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day19) |
