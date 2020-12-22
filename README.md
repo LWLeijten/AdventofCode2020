@@ -23,4 +23,5 @@ My solutions to the advent of code event 2020. For this edition I chose to solve
 | 18. | :heavy_plus_sign: Operation Order | [link](https://adventofcode.com/2020/day/18)|[solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day18) |
 | 19. | :octopus: Monster Messages | [link](https://adventofcode.com/2020/day/19)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day19) |
 | 20. | :jigsaw: Jurassic Jigsaw | [link](https://adventofcode.com/2020/day/20)      |     | 
-| 21. | :hospital: Allergen Assessment | [link](https://adventofcode.com/2020/day/21)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day21) |
+| 21. | :hospital: Allergen Assessment | [link](https://adventofcode.com/2020/day/21)  | [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day21) |
+| 22. | :crab: Crab Combat | [link](https://adventofcode.com/2020/day/22)  | [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day22) |
