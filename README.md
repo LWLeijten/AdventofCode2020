@@ -1,4 +1,6 @@
 # AdventofCode2020
+![50stars](https://github.com/LWLeijten/AdventofCode2020/blob/main/AdventOfCode.PNG)
+
 My solutions to the advent of code event 2020. For this edition I chose to solve the puzzles using Python.
 
 | Day | Name        | Link           | Solution  |
@@ -22,7 +24,7 @@ My solutions to the advent of code event 2020. For this edition I chose to solve
 | 17. | :large_blue_diamond: Conway Cubes | [link](https://adventofcode.com/2020/day/17)|[solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day17) |
 | 18. | :heavy_plus_sign: Operation Order | [link](https://adventofcode.com/2020/day/18)|[solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day18) |
 | 19. | :octopus: Monster Messages | [link](https://adventofcode.com/2020/day/19)      |    [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day19) |
-| 20. | :jigsaw: Jurassic Jigsaw | [link](https://adventofcode.com/2020/day/20)      |     | 
+| 20. | :jigsaw: Jurassic Jigsaw | [link](https://adventofcode.com/2020/day/20)      | [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day20)    | 
 | 21. | :hospital: Allergen Assessment | [link](https://adventofcode.com/2020/day/21)  | [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day21) |
 | 22. | :crab: Crab Combat | [link](https://adventofcode.com/2020/day/22)  | [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day22) |
 | 23. | :crab: Crab Cups | [link](https://adventofcode.com/2020/day/23)  | [solution](https://github.com/LWLeijten/AdventofCode2020/tree/main/solutions/day23) |
